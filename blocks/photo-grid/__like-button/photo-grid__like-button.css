@@ -1,0 +1,8 @@
+.photo-grid__like-button {
+  background: url(../../../images/Vector\ \(Stroke\).svg);
+  width: 22px;
+  height: 19px;
+  object-fit: contain;
+  padding: 0;
+  border: none;
+}
