@@ -8,3 +8,10 @@
   padding: 0;
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .profile__add-button  {
+    width: 100%;
+
+  }
+}

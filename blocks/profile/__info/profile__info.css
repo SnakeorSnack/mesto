@@ -3,5 +3,13 @@
   display: grid;
   grid-template-columns: minmax(294px, 1fr) minmax(24px, 1fr);
   column-gap: 18px;
-  row-gap: 16px;
+  row-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .profile__info  {
+    grid-template-columns: minmax(189px, 1fr) minmax(18px, 1fr);
+    column-gap: 10px;
+    max-width: 282px;
+  }
 }

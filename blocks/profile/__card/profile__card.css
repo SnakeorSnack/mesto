@@ -3,4 +3,18 @@
   flex-direction: row;
   align-items: center;
   gap: 30px;
+  box-sizing: border-box;
 }
+
+@media screen and (max-width: 879px) {
+  .footer {
+    padding: 0 25px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile__card {
+    flex-direction: column;
+  }
+}
+
