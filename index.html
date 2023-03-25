@@ -19,13 +19,13 @@
           <img src="./images/image.svg" alt="Аватар профиля" class="profile__avatar">
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button"></button>
-            <p class="profile__subline">Исследователь океана</p>
+            <button class="profile__edit-button buttons-hover"></button>
+            <p class="profile__profession">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button buttons-hover"></button>
       </section>
-      <section class="photo-grid">
+      <section class="photo-grid" aria-label="Фотографии пользователя">
         <ul class="photo-grid__list">
           <li class="photo-grid__element">
             <img src="./images/photo-grid/tower.png" alt="Башня" class="photo-grid__picture">
@@ -79,10 +79,12 @@
   <section class="popup">
     <div class="popup__content">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <input type="text" class="popup__inputfield-one">
-      <input type="text"  class="popup__inputfield-two">
-      <button class="popup__submit-button">Сохранить</button>
-      <button class="popup__close-button"></button>
+      <form class="popup__form">
+        <input type="text" class="popup__inputfield popup__inputfield_name" placeholder="Имя пользователя" name="name">
+        <input type="text"  class="popup__inputfield popup__inputfield_profession" placeholder="Профессия" name="profession">
+        <button class="popup__submit-button" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__close-button buttons-hover"></button>
     </div>
   </section>
   <script src="./script/index.js"></script>
