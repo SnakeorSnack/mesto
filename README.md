@@ -18,5 +18,5 @@
 
 **Link**
 
-* [Ссылка на проект](https://snakeorsnack.github.io/russian-travel/)
+* [Ссылка на проект]( https://snakeorsnack.github.io/mesto/)
 
