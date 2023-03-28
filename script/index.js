@@ -1,4 +1,4 @@
-const editButton = document.querySelector(".profile__edit-button");
+const editButton = document.querySelector('.profile__edit-button');
 const infoEditorPopup = document.querySelector('.popup');
 const closePopupButton = infoEditorPopup.querySelector('.popup__close-button');
 const infoEditorForm = infoEditorPopup.querySelector('.popup__form');
@@ -11,8 +11,8 @@ const profileProfession = document.querySelector('.profile__profession');
 editButton.addEventListener('click',openEditor);
 function openEditor() {
   infoEditorPopup.classList.add('popup_open');
-  inputName.value = profileName.innerHTML;
-  inputProfession.value = profileProfession.innerHTML
+  inputName.value = profileName.textContent;
+  inputProfession.value = profileProfession.textContent;
 }
 
 closePopupButton.addEventListener('click',closePopup);
@@ -25,7 +25,7 @@ function clickSubmitButton(event) {
   event.preventDefault();
   const name = inputName.value;
   const profession = inputProfession.value;
-  profileName.innerHTML = name;
-  profileProfession.innerHTML = profession;
-  infoEditorPopup.classList.remove('popup_open');
+  profileName.textContent = name;
+  profileProfession.textContent = profession;
+  closePopup();
 }
