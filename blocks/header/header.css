@@ -6,6 +6,7 @@
   justify-content: start;
   margin: 45px auto 0;
   box-sizing: border-box;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
 @media screen and (max-width: 600px) {
