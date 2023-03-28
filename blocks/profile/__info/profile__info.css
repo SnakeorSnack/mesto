@@ -10,8 +10,8 @@
 @media screen and (max-width: 750px) {
   .profile__info  {
     max-width: 310px;
-    grid-template-columns: minmax(255px, 1fr) minmax(24px, 1fr);
-    column-gap: 10px;
+    grid-template-columns: minmax(255px, 1fr) minmax(21px, 1fr);
+    column-gap: 8px;
   }
 }
 
