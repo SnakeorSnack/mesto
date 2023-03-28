@@ -12,10 +12,18 @@
   padding: 0;
   cursor: pointer;
 }
+@media screen and (max-width: 750px) {
+  .profile__add-button  {
+    width: 120px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .profile__add-button  {
     width: 100%;
     margin-top: 36px;
+    background: url(../../../images/ass-button-s.svg);
+    background-repeat:no-repeat;
+    background-position: center;
   }
 }

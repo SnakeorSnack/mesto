@@ -7,9 +7,18 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 750px) {
+  .profile__info  {
+    max-width: 310px;
+    grid-template-columns: minmax(255px, 1fr) minmax(24px, 1fr);
+    column-gap: 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .profile__info  {
     display: flex;
     flex-wrap: wrap;
+    max-width: 282px;
   }
 }
