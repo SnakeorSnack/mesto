@@ -6,7 +6,8 @@
   height: 50px;
   object-fit: cover;
   border: none;
-  border: 1px solid #fff;
+  border: 2px solid #FFFFFF;
+  border-radius: 2px;
   margin-right: 0px;
   padding: 0;
   cursor: pointer;

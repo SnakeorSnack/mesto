@@ -10,14 +10,14 @@ const profileProfession = document.querySelector('.profile__profession');
 
 editButton.addEventListener('click',openEditor);
 function openEditor() {
-  infoEditorPopup.classList.add('popup_open');
+  infoEditorPopup.classList.add('popup_opened');
   inputName.value = profileName.textContent;
   inputProfession.value = profileProfession.textContent;
 }
 
 closePopupButton.addEventListener('click',closePopup);
 function closePopup() {
-  infoEditorPopup.classList.remove('popup_open');
+  infoEditorPopup.classList.remove('popup_opened');
 }
 
 infoEditorForm.addEventListener('submit', clickSubmitButton);
