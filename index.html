@@ -11,62 +11,61 @@
   <div class="page">
     <header class="header">
       <img src="./images/logo.svg" alt="Логотип Место" class="header__logo">
-      <div class="header__line"></div>
     </header>
     <main class="content">
       <section class="profile">
         <div class="profile__card">
-          <img src="./images/image.svg" alt="Аватар профиля" class="profile__avatar">
+          <img src="./images/avatar.png" alt="Аватар профиля" class="profile__avatar">
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button buttons-hover"></button>
+            <button class="profile__edit-button buttons-hover" type="button"></button>
             <p class="profile__profession">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-button buttons-hover"></button>
+        <button class="profile__add-button buttons-hover" type="button"></button>
       </section>
       <section class="photo-grid" aria-label="Фотографии пользователя">
         <ul class="photo-grid__list">
           <li class="photo-grid__element">
             <img src="./images/photo-grid/tower.png" alt="Башня" class="photo-grid__picture">
             <div class="photo-grid__info">
-              <p class="photo-grid__picture-name">Карачаевск</p>
-              <button class="photo-grid__like-button"></button>
+              <h2 class="photo-grid__picture-name">Карачаевск</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </li>
           <li class="photo-grid__element">
             <img src="./images/photo-grid/hill.png" alt="Башня" class="photo-grid__picture">
             <div class="photo-grid__info">
-              <p class="photo-grid__picture-name">Гора Эльбрус</p>
-              <button class="photo-grid__like-button"></button>
+              <h2 class="photo-grid__picture-name">Гора Эльбрус</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </li>
           <li class="photo-grid__element">
             <img src="./images/photo-grid/mountain.png" alt="Башня" class="photo-grid__picture">
             <div class="photo-grid__info">
-              <p class="photo-grid__picture-name">Домбай</p>
-              <button class="photo-grid__like-button"></button>
+              <h2 class="photo-grid__picture-name">Домбай</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </li>
           <li class="photo-grid__element">
             <img src="./images/photo-grid/hill.png" alt="Башня" class="photo-grid__picture">
             <div class="photo-grid__info">
-              <p class="photo-grid__picture-name">Гора Эльбрус</p>
-              <button class="photo-grid__like-button"></button>
+              <h2 class="photo-grid__picture-name">Гора Эльбрус</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </li>
           <li class="photo-grid__element">
             <img src="./images/photo-grid/mountain.png" alt="Башня" class="photo-grid__picture">
             <div class="photo-grid__info">
-              <p class="photo-grid__picture-name">Домбай</p>
-              <button class="photo-grid__like-button"></button>
+              <h2 class="photo-grid__picture-name">Домбай</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </li>
           <li class="photo-grid__element">
             <img src="./images/photo-grid/tower.png" alt="Башня" class="photo-grid__picture">
             <div class="photo-grid__info">
-              <p class="photo-grid__picture-name">Карачаево-Черкесия</p>
-              <button class="photo-grid__like-button"></button>
+              <h2 class="photo-grid__picture-name">Карачаево-Черкесия</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </li>
         </ul>
@@ -76,17 +75,17 @@
       <p class="footer__copyright">© 2023 Mesto Russia</p>
     </footer>
   </div>
-  <section class="popup">
-    <div class="popup__content">
+  <div class="popup">
+    <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form">
-        <input type="text" class="popup__inputfield popup__inputfield_name" placeholder="Имя пользователя" name="name">
-        <input type="text"  class="popup__inputfield popup__inputfield_profession" placeholder="Профессия" name="profession">
+      <form class="popup__form" name="popup">
+        <input type="text" class="popup__inputfield popup__inputfield_change_name" placeholder="Имя пользователя" name="name" required>
+        <input type="text"  class="popup__inputfield popup__inputfield_change_profession" placeholder="Профессия" name="profession" required>
         <button class="popup__submit-button" type="submit">Сохранить</button>
       </form>
-      <button class="popup__close-button buttons-hover"></button>
+      <button class="popup__close-button buttons-hover" type="button"></button>
     </div>
-  </section>
+  </div>
   <script src="./script/index.js"></script>
 </body>
 </html>

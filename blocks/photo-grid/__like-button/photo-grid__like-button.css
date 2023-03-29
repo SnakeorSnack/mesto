@@ -1,5 +1,5 @@
 .photo-grid__like-button {
-  background: url(../../../images/Vector\ \(Stroke\).svg);
+  background: url(../../../images/heart.svg);
   background-repeat:no-repeat;
   background-position: center;
   width: 22px;
@@ -8,4 +8,8 @@
   padding: 0;
   border: none;
   cursor: pointer;
+}
+
+.photo-grid__like-button:hover {
+  opacity: 0.5;
 }

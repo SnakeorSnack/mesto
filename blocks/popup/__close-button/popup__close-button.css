@@ -9,6 +9,7 @@
   top: -32px;
   border: none;
   cursor: pointer;
+  background-size: cover;
 }
 
 @media screen and (max-width: 600px) {

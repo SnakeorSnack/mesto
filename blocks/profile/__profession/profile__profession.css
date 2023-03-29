@@ -1,4 +1,4 @@
-.profile__subline {
+.profile__profession {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -8,8 +8,14 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 750px) {
+  .profile__profession {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
 @media screen and (max-width: 600px) {
-  .profile__subline {
+  .profile__profession {
     font-size: 14px;
     line-height: 17px;
     text-align: center;
