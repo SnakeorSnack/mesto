@@ -18,5 +18,5 @@
 
 **Link**
 
-* [Ссылка на проект]( https://snakeorsnack.github.io/mesto/)
+* [Ссылка на проект](https://snakeorsnack.github.io/mesto/)
 
