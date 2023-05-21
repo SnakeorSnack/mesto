@@ -8,6 +8,9 @@ const profileName = document.querySelector('.profile__name');
 const profileProfession = document.querySelector('.profile__profession');
 const gridListElement = document.querySelector('.photo-grid__list');
 const cardTemplate = document.querySelector('.card-template').content;
+const addButton = document.querySelector('.profile__add-button');
+const addImagePopup = document.querySelector('.popup_type_add-image');
+const closeAddImagePopup = addImagePopup.querySelector('.popup__close-button_type_add-image');
 
 /* Массив карточек «из коробки» */
 const initialCards = [
@@ -48,8 +51,10 @@ function openEditor() {
 /* Функция закрытия попапа */
 
 closePopupButton.addEventListener('click',closePopup);
+closeAddImagePopup.addEventListener('click',closePopup);
 function closePopup() {
   infoEditorPopup.classList.remove('popup_opened');
+  addImagePopup.classList.remove('popup_opened');
 }
 
 /* Функция сохранения изменений Имени и Профессии */
@@ -72,3 +77,14 @@ initialCards.forEach((item) => {
   templateElement.querySelector('.photo-grid__picture').src = item.link;
   gridListElement.append(templateElement);
 });
+
+/* Функция открытия попапа добавления картинки */
+
+addButton.addEventListener('click',addImage);
+function addImage() {
+  addImagePopup.classList.add('popup_opened');
+  inputName.value = profileName.textContent;
+  inputProfession.value = profileProfession.textContent;
+}
+
+
