@@ -26,6 +26,7 @@
       </section>
       <section class="photo-grid" aria-label="Фотографии пользователя">
         <ul class="photo-grid__list">
+          <!--
           <li class="photo-grid__element">
             <img src="./images/photo-grid/tower.png" alt="Башня" class="photo-grid__picture">
             <div class="photo-grid__info">
@@ -68,7 +69,7 @@
               <h2 class="photo-grid__picture-name">Карачаево-Черкесия</h2>
               <button class="photo-grid__like-button" type="button"></button>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
     </main>
@@ -87,13 +88,15 @@
       <button class="popup__close-button buttons-hover" type="button"></button>
     </div>
   </div>
-  <template class="photo-grid__element">
+  <template class="card-template">
+    <li class="photo-grid__element">
     <img src="" alt="" class="photo-grid__picture">
     <div class="photo-grid__info">
       <h2 class="photo-grid__picture-name"></h2>
       <button class="photo-grid__like-button" type="button"></button>
     </div>
     <button class="photo-grid__delete-button" type="button"></button>
+  </li>
   </template>
   <script src="./script/index.js"></script>
 </body>
