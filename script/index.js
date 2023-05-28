@@ -11,10 +11,9 @@ const gridListElement = document.querySelector('.photo-grid__list');
 const cardTemplate = document.querySelector('.card-template').content;
 const addButton = document.querySelector('.profile__add-button');
 const addImagePopup = document.querySelector('.popup_type_add-image');
-const closeAddImagePopup = addImagePopup.querySelector('.popup__close-button_type_add-image');
 const popupImage = document.querySelector('.popup_type_open-image');
-const openedImage = popupImage.querySelector('.popup-image__image');
-const openedImageFigcaption = popupImage.querySelector('.popup-image__figcaption');
+const openedImage = popupImage.querySelector('.popup__image');
+const openedImageFigcaption = popupImage.querySelector('.popup__figcaption');
 
 /* Массив карточек «из коробки» */
 const initialCards = [
