@@ -6,12 +6,6 @@
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 879px) {
-  .footer {
-    padding: 0 25px 0;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .profile__card {
     flex-direction: column;

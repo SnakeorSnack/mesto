@@ -1,7 +1,7 @@
 const editButton = document.querySelector('.profile__edit-button');
 const infoEditorPopup = document.querySelector('.popup_type_edit');
 const popup = document.querySelectorAll('.popup');
-const closePopupButton =  document.querySelectorAll('.popup__close-button');
+const closePopupButtons =  document.querySelectorAll('.popup__close-button');
 const infoEditorForm = infoEditorPopup.querySelector('.popup__form');
 const inputName = infoEditorPopup.querySelector('.popup__inputfield_change_name');
 const inputProfession = infoEditorPopup.querySelector('.popup__inputfield_change_profession');
@@ -50,8 +50,8 @@ function openPopup(popup) {
 
 /* Функция открытия попапа редактирования профиля */
 
-editButton.addEventListener('click',openEditor);
-function openEditor() {
+editButton.addEventListener('click',openEditProfilePopup);
+function openEditProfilePopup() {
   openPopup(infoEditorPopup);
   inputName.value = profileName.textContent;
   inputProfession.value = profileProfession.textContent;
@@ -62,7 +62,7 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
 
-closePopupButton.forEach((element) => {
+closePopupButtons.forEach((element) => {
   const popup = element.closest('.popup');
   element.addEventListener('click', () => {
     closePopup(popup)
