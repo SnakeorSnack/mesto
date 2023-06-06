@@ -2,4 +2,9 @@
   object-fit: cover;
   width: 282px;
   height: 282px;
+  cursor: pointer;
+}
+
+.photo-grid__picture:hover {
+  opacity: 0.9;
 }
