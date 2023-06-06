@@ -1,6 +1,5 @@
 const editButton = document.querySelector('.profile__edit-button');
 const infoEditorPopup = document.querySelector('.popup_type_edit');
-const popup = document.querySelectorAll('.popup');
 const closePopupButtons =  document.querySelectorAll('.popup__close-button');
 const infoEditorForm = infoEditorPopup.querySelector('.popup__form');
 const inputName = infoEditorPopup.querySelector('.popup__inputfield_change_name');
@@ -56,12 +55,12 @@ function openEditProfilePopup() {
   inputName.value = profileName.textContent;
   inputProfession.value = profileProfession.textContent;
 }
+
 /* Функция закрытия попапа */
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
-
 closePopupButtons.forEach((element) => {
   const popup = element.closest('.popup');
   element.addEventListener('click', () => {
@@ -71,8 +70,8 @@ closePopupButtons.forEach((element) => {
 
 /* Функция сохранения изменений Имени и Профессии */
 
-infoEditorForm.addEventListener('submit', clickSubmitButton);
-function clickSubmitButton(event) {
+infoEditorForm.addEventListener('submit',  handleProfileFormSubmit);
+function  handleProfileFormSubmit(event) {
   event.preventDefault();
   const name = inputName.value;
   const profession = inputProfession.value;
@@ -83,22 +82,19 @@ function clickSubmitButton(event) {
 
 /* Функция удаления карточки */
 
-const deleteCard = (evt) => {
+function deleteCard(evt) {
   const photoCard = evt.target.closest('.photo-grid__element');
   photoCard.remove();
 }
 
 /* Функция лайка карточки */
-const toggleLikeButton = (likeToToggle) => likeToToggle.classList.toggle('photo-grid__like-button_active');
-
-
-
-
-
+function toggleLikeButton(likeToToggle){
+  likeToToggle.classList.toggle('photo-grid__like-button_active');
+}
 
 /* Функция добавления карточек «из коробки» */
 
-const renderCards = (card) => {
+function renderCard(card) {
   const templateElement = cardTemplate.cloneNode(true);
   templateElement.querySelector('.photo-grid__picture-name').textContent = card.name;
   templateElement.querySelector('.photo-grid__picture').src = card.link;
@@ -115,24 +111,19 @@ const renderCards = (card) => {
   return templateElement
 };
 
-/* Функция открытия картинки
+/* Функция открытия картинки */
 
-function openPicture (object) {
-  console.log('click');
-  openPopup(popupImage)
-  openedImage.src = object.link;
-} */
 
-initialCards.forEach((item) =>{
-  const cardo = renderCards(item);
+initialCards.forEach(function openImage(item) {
+  const cardo = renderCard(item);
   gridListElement.append(cardo);
-})
+});
 
-/* Функция открытия попапа добавления картинки */
+/* Функция открытия попапа добавления нового места */
 
-addButton.addEventListener('click',addImage);
-function addImage() {
-  addImagePopup.classList.add('popup_opened');
+addButton.addEventListener('click',openAddImagePopup);
+function openAddImagePopup() {
+  openPopup(addImagePopup);
 }
 
 /* Функция добавления карточки */
@@ -140,11 +131,12 @@ const inputTitle = addImagePopup.querySelector('.popup__inputfield_add_title');
 const inputLink = addImagePopup.querySelector('.popup__inputfield_add_link');
 const addCardForm = addImagePopup.querySelector('.popup__form_type_add-image');
 
-addCardForm.addEventListener('submit', evt =>{
+addCardForm.addEventListener('submit', addCard)
+function addCard(evt) {
   evt.preventDefault();
   const newCard = {name: inputTitle.value, link: inputLink.value}
   inputTitle.value = '';
   inputLink.value = '';
-  gridListElement.prepend(renderCards(newCard));
+  gridListElement.prepend(renderCard(newCard));
   closePopup(addImagePopup);
-})
+}
