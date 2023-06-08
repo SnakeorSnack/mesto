@@ -38,7 +38,9 @@
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form" name="Меню редактирования профиля">
         <input type="text" class="popup__inputfield popup__inputfield_change_name" placeholder="Имя пользователя" name="name" required>
+        <span class="popup__error popup__error_type_name">errorerroeerroeerrorerroe</span>
         <input type="text"  class="popup__inputfield popup__inputfield_change_profession" placeholder="Профессия" name="profession" required>
+        <span class="popup__error popup__error_type_profession"></span>
         <button class="popup__submit-button" type="submit">Сохранить</button>
       </form>
       <button class="popup__close-button buttons-hover" type="button"></button>
@@ -49,7 +51,9 @@
       <h2 class="popup__title popup__title_type_new-place">Новое место</h2>
       <form class="popup__form popup__form_type_add-image" name="Добавление картинки">
         <input type="text" class="popup__inputfield popup__inputfield_add_title" placeholder="Название" name="title" required>
+        <span class="popup__error popup__error_type_title"></span>
         <input type="text"  class="popup__inputfield popup__inputfield_add_link" placeholder="Ссылка на картинку" name="link" required>
+        <span class="popup__error popup__error_type_link"></span>
         <button class="popup__submit-button" type="submit">Создать</button>
       </form>
       <button class="popup__close-button buttons-hover popup__close-button_type_add-image" type="button"></button>
@@ -74,6 +78,7 @@
     <button class="photo-grid__delete-button" type="button"></button>
   </li>
   </template>
+  <script src="./script/validate.js"></script>
   <script src="./script/index.js"></script>
 </body>
 </html>
