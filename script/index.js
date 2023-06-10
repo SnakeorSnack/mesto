@@ -46,14 +46,14 @@ const initialCards = [
 /* Функция открытия попапа */
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  popup.addEventListener('keydown', closeByEscape);
+  document.addEventListener('keydown', closeByEscape);
   popup.addEventListener('click', closeByOverlay, true);
 }
 
 /* Функция закрытия попапа */
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  popup.removeEventListener('keydown', closeByEscape);
+  document.removeEventListener('keydown', closeByEscape);
   popup.removeEventListener('click', closeByOverlay, true);
 }
 closePopupButtons.forEach((element) => {
