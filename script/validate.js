@@ -64,20 +64,22 @@ function toggleButtonState(inputList, submitButton, inactiveButtonClass) {
   }
 }
 
+/* проверка валидности инпута фунция */
 function isInputValid(inputList) {
   return Array.from(inputList).every((input) => input.validity.valid)
 }
 
+/* Активация кнопки субмит фунция */
 function enableSubmitButton(submitButton, inactiveButtonClass) {
   submitButton.classList.remove(inactiveButtonClass);
   submitButton.disabled = false;
 }
-
+/* ДеАктивация кнопки субмит фунция */
 function disableSubmitButton(submitButton, inactiveButtonClass) {
   submitButton.classList.add(inactiveButtonClass);
   submitButton.disabled = true;
 }
-
+/* Ресет ошибок форм фунция */
 function resetInputErrorForm(form) {
   form.querySelectorAll(validationConfig.inputSelector).forEach((input) =>{
     const errorInputElement = document.querySelector(`${validationConfig.spanType}${input.name}`);
