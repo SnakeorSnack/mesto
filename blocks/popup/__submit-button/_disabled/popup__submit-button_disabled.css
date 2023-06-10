@@ -1,0 +1,5 @@
+.popup__submit-button_disabled {
+  background: #fff!important;
+  color: grey;
+  border: 1px solid grey;
+}

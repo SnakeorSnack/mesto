@@ -1,3 +1,4 @@
+const popup = document.querySelector('.popup');
 const editButton = document.querySelector('.profile__edit-button');
 const infoEditorPopup = document.querySelector('.popup_type_edit');
 const closePopupButtons =  document.querySelectorAll('.popup__close-button');
@@ -45,28 +46,47 @@ const initialCards = [
 /* Функция открытия попапа */
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-}
-
-/* Функция открытия попапа редактирования профиля */
-
-editButton.addEventListener('click',openEditProfilePopup);
-function openEditProfilePopup() {
-  openPopup(infoEditorPopup);
-  inputName.value = profileName.textContent;
-  inputProfession.value = profileProfession.textContent;
+  popup.addEventListener('keydown', closeByEscape);
+  popup.addEventListener('click', closeByOverlay, true);
 }
 
 /* Функция закрытия попапа */
-
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  popup.removeEventListener('keydown', closeByEscape);
+  popup.removeEventListener('click', closeByOverlay, true);
 }
 closePopupButtons.forEach((element) => {
   const popup = element.closest('.popup');
-  element.addEventListener('click', () => {
+  element.addEventListener('click', (evt) => {
     closePopup(popup)
   })
 })
+
+/* Функция закрытия попапа при нажатии Esc*/
+function closeByEscape(evt) {
+  if(evt.key == 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup)
+  }
+}
+
+/* Функция закрытия попапа при нажатии overlay*/
+function closeByOverlay(evt) {
+  const openedPopup = document.querySelector('.popup_opened');
+  if (evt.target === evt.currentTarget){
+    closePopup(openedPopup);
+  }
+}
+
+/* Функция открытия попапа редактирования профиля */
+editButton.addEventListener('click',openEditProfilePopup);
+function openEditProfilePopup() {
+  openPopup(infoEditorPopup);
+  resetInputErrorForm(infoEditorForm);
+  inputName.value = profileName.textContent;
+  inputProfession.value = profileProfession.textContent;
+}
 
 /* Функция сохранения изменений Имени и Профессии */
 
@@ -124,6 +144,9 @@ initialCards.forEach(function openImage(item) {
 addButton.addEventListener('click',openAddImagePopup);
 function openAddImagePopup() {
   openPopup(addImagePopup);
+  resetInputErrorForm(addImagePopup);
+  inputTitle.value = '';
+  inputLink.value = '';
 }
 
 /* Функция добавления карточки */
