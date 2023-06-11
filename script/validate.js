@@ -56,7 +56,7 @@ function hideInputErrorMessage(input, errorInputElement, inputErrorClass, errorC
 
 /* Активация\деактивация кнопки submit фунция */
 function toggleButtonState(inputList, submitButton, inactiveButtonClass) {
-  if (isInputValid(inputList)) {
+  if (areAllInputsValid(inputList)) {
     enableSubmitButton(submitButton, inactiveButtonClass);
   }
   else {
@@ -64,7 +64,7 @@ function toggleButtonState(inputList, submitButton, inactiveButtonClass) {
   }
 }
 
-function isInputValid(inputList) {
+function areAllInputsValid(inputList) {
   return Array.from(inputList).every((input) => input.validity.valid)
 }
 
