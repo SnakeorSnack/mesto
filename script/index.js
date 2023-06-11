@@ -45,9 +45,8 @@ function closeByEscape(evt) {
 
 /* Функция закрытия попапа при нажатии overlay*/
 function closeByOverlay(evt) {
-  const openedPopup = document.querySelector('.popup_opened');
   if (evt.target === evt.currentTarget){
-    closePopup(openedPopup);
+    closePopup(evt.currentTarget);
   }
 }
 
