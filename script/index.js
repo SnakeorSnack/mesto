@@ -14,6 +14,7 @@ const addImagePopup = document.querySelector('.popup_type_add-image');
 const popupImage = document.querySelector('.popup_type_open-image');
 const openedImage = popupImage.querySelector('.popup__image');
 const openedImageFigcaption = popupImage.querySelector('.popup__figcaption');
+const submitButtonTypeAdd = document.querySelector('.popup__submit-button_type_add');
 
 /* Функция открытия попапа */
 function openPopup(popup) {
@@ -116,6 +117,7 @@ addButton.addEventListener('click',openAddImagePopup);
 function openAddImagePopup() {
   openPopup(addImagePopup);
   resetInputErrorForm(addImagePopup);
+  disableSubmitButton(submitButtonTypeAdd,validationConfig.inactiveButtonClass);
   inputTitle.value = '';
   inputLink.value = '';
 }
