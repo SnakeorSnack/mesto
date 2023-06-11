@@ -63,7 +63,7 @@ function toggleButtonState(inputList, submitButton, inactiveButtonClass) {
     disableSubmitButton(submitButton, inactiveButtonClass);
   }
 }
-
+/* проверка валидности инпутов фунция */
 function areAllInputsValid(inputList) {
   return Array.from(inputList).every((input) => input.validity.valid)
 }
@@ -79,6 +79,7 @@ function disableSubmitButton(submitButton, inactiveButtonClass) {
   submitButton.disabled = true;
 }
 
+/* Ресет ошибок форм фунция */
 function resetInputErrorForm(form, validationConfig) {
   form.querySelectorAll(validationConfig.inputSelector).forEach((input) => {
     const errorInputElement = document.querySelector(`${validationConfig.spanType}${input.name}`);
