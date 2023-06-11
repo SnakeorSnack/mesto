@@ -55,7 +55,7 @@ function closeByOverlay(evt) {
 editButton.addEventListener('click',openEditProfilePopup);
 function openEditProfilePopup() {
   openPopup(infoEditorPopup);
-  resetInputErrorForm(infoEditorForm);
+  resetInputErrorForm(infoEditorForm, validationConfig);
   inputName.value = profileName.textContent;
   inputProfession.value = profileProfession.textContent;
 }
@@ -116,7 +116,7 @@ initialCards.forEach(function openImage(item) {
 addButton.addEventListener('click',openAddImagePopup);
 function openAddImagePopup() {
   openPopup(addImagePopup);
-  resetInputErrorForm(addImagePopup);
+  resetInputErrorForm(addImagePopup,validationConfig);
   disableSubmitButton(submitButtonTypeAdd,validationConfig.inactiveButtonClass);
   inputTitle.value = '';
   inputLink.value = '';

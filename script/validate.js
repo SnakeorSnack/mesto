@@ -78,13 +78,13 @@ function disableSubmitButton(submitButton, inactiveButtonClass) {
   submitButton.disabled = true;
 }
 
-function resetInputErrorForm(form) {
-  form.querySelectorAll(validationConfig.inputSelector).forEach((input) =>{
+function resetInputErrorForm(form, validationConfig) {
+  form.querySelectorAll(validationConfig.inputSelector).forEach((input) => {
     const errorInputElement = document.querySelector(`${validationConfig.spanType}${input.name}`);
-    if(!input.validity.valid){
+    if (!input.validity.valid) {
       hideInputErrorMessage(input, errorInputElement, validationConfig.inputErrorClass, validationConfig.errorClass);
     }
-  })
+  });
 }
 
 enableValidation(validationConfig);
