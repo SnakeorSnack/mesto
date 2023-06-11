@@ -85,7 +85,7 @@ function toggleLikeButton(likeToToggle){
 
 /* Функция добавления карточек «из коробки» */
 
-function renderCard(card) {
+function createCard(card) {
   const templateElement = cardTemplate.cloneNode(true);
   templateElement.querySelector('.photo-grid__picture-name').textContent = card.name;
   templateElement.querySelector('.photo-grid__picture').src = card.link;
@@ -106,7 +106,7 @@ function renderCard(card) {
 
 
 initialCards.forEach(function openImage(item) {
-  const cardo = renderCard(item);
+  const cardo = createCard(item);
   gridListElement.append(cardo);
 });
 
@@ -131,6 +131,6 @@ function addCard(evt) {
   const newCard = {name: inputTitle.value, link: inputLink.value}
   inputTitle.value = '';
   inputLink.value = '';
-  gridListElement.prepend(renderCard(newCard));
+  gridListElement.prepend(createCard(newCard));
   closePopup(addImagePopup);
 }
