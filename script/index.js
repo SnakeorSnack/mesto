@@ -118,8 +118,7 @@ function openAddImagePopup() {
   openPopup(addImagePopup);
   resetInputErrorForm(addImagePopup,validationConfig);
   disableSubmitButton(submitButtonTypeAdd,validationConfig.inactiveButtonClass);
-  inputTitle.value.reset();
-  inputLink.value.reset();
+  addCardForm.reset();
 }
 
 /* Функция добавления карточки */
