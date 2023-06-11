@@ -129,8 +129,6 @@ addCardForm.addEventListener('submit', addCard)
 function addCard(evt) {
   evt.preventDefault();
   const newCard = {name: inputTitle.value, link: inputLink.value}
-  inputTitle.value = '';
-  inputLink.value = '';
   gridListElement.prepend(createCard(newCard));
   closePopup(addImagePopup);
 }
